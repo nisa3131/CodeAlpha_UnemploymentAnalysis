@@ -1,0 +1,289 @@
+{
+  "task": "CodeAlpha Task 2: Unemployment Analysis with Python",
+  "analysis_type": "descriptive; no causal effect, predictive model, or seasonal decomposition claimed",
+  "aggregation": "unweighted means across states/territories or matched state-area observations; not official nationwide population-weighted rates",
+  "data_quality": {
+    "historical_state_area": {
+      "file": "Unemployment in India.csv",
+      "sha256": "e7a4cc847297edc033610082a6b333f0fe56e9e74d01384da474bd13ec5d5891",
+      "raw_rows": 768,
+      "fully_blank_rows_removed": 28,
+      "clean_rows": 740,
+      "states_or_territories": 28,
+      "first_month": "2019-05",
+      "last_month": "2020-06",
+      "months": 14,
+      "duplicate_keys": 0,
+      "partial_missing_required_values": 0,
+      "observed_state_area_pairs": 55,
+      "missing_entity_month_cells": 30
+    },
+    "2020_state": {
+      "file": "Unemployment_Rate_upto_11_2020.csv",
+      "sha256": "51bdb8f26de85880c260fdd7acd69373bc4db5872e6e68bbb4d1742f9abd1d8e",
+      "raw_rows": 267,
+      "fully_blank_rows_removed": 0,
+      "clean_rows": 267,
+      "states_or_territories": 27,
+      "first_month": "2020-01",
+      "last_month": "2020-10",
+      "months": 10,
+      "duplicate_keys": 0,
+      "partial_missing_required_values": 0,
+      "source_coordinate_label_warning": "Source latitude reaches >90 degrees and the two ranges appear swapped. Labels are retained as source_*_label fields, not verified or used for mapping.",
+      "missing_entity_month_cells": 3
+    }
+  },
+  "state_paired_panel": {
+    "n_states": 25,
+    "included_states": [
+      "Andhra Pradesh",
+      "Assam",
+      "Bihar",
+      "Chhattisgarh",
+      "Delhi",
+      "Goa",
+      "Gujarat",
+      "Haryana",
+      "Himachal Pradesh",
+      "Jharkhand",
+      "Karnataka",
+      "Kerala",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Meghalaya",
+      "Odisha",
+      "Puducherry",
+      "Punjab",
+      "Rajasthan",
+      "Tamil Nadu",
+      "Telangana",
+      "Tripura",
+      "Uttar Pradesh",
+      "Uttarakhand",
+      "West Bengal"
+    ],
+    "excluded_incomplete_states": [
+      "Jammu & Kashmir",
+      "Sikkim"
+    ],
+    "periods": {
+      "pre_covid": [
+        "2020-01",
+        "2020-02",
+        "2020-03"
+      ],
+      "first_wave": [
+        "2020-04",
+        "2020-05"
+      ],
+      "later_recovery": [
+        "2020-08",
+        "2020-09",
+        "2020-10"
+      ]
+    },
+    "means": {
+      "pre_covid_rate_pct": 9.203066666666667,
+      "pre_covid_lpr_pct": 44.13346666666666,
+      "first_wave_rate_pct": 23.204199999999997,
+      "first_wave_lpr_pct": 37.3286,
+      "later_recovery_rate_pct": 8.903466666666667,
+      "later_recovery_lpr_pct": 42.0736,
+      "first_wave_change_pp": 14.001133333333332,
+      "later_recovery_change_from_pre_pp": -0.29959999999999976,
+      "first_wave_lpr_change_pp": -6.804866666666666,
+      "later_recovery_lpr_change_from_pre_pp": -2.0598666666666654
+    },
+    "states_above_pre_covid_in_later_recovery": 9,
+    "peak_balanced_month": "2020-05",
+    "peak_balanced_rate_pct": 23.374000000000002,
+    "largest_first_wave_increases": [
+      {
+        "state": "Puducherry",
+        "first_wave_change_pp": 65.83999999999999
+      },
+      {
+        "state": "Jharkhand",
+        "first_wave_change_pp": 42.93
+      },
+      {
+        "state": "Tamil Nadu",
+        "first_wave_change_pp": 38.141666666666666
+      },
+      {
+        "state": "Bihar",
+        "first_wave_change_pp": 34.19
+      },
+      {
+        "state": "Karnataka",
+        "first_wave_change_pp": 21.595000000000002
+      }
+    ]
+  },
+  "macro_region_paired_means": [
+    {
+      "macro_region": "East",
+      "pre_covid_rate_pct": 8.658333333333333,
+      "pre_covid_lpr_pct": 41.94,
+      "first_wave_rate_pct": 33.613749999999996,
+      "first_wave_lpr_pct": 37.00375,
+      "later_recovery_rate_pct": 8.739166666666668,
+      "later_recovery_lpr_pct": 40.873333333333335,
+      "first_wave_change_pp": 24.955416666666665,
+      "later_recovery_change_from_pre_pp": 0.08083333333333398,
+      "first_wave_lpr_change_pp": -4.936250000000001,
+      "later_recovery_lpr_change_from_pre_pp": -1.0666666666666647,
+      "states": 4
+    },
+    {
+      "macro_region": "North",
+      "pre_covid_rate_pct": 14.53,
+      "pre_covid_lpr_pct": 41.235238095238095,
+      "first_wave_rate_pct": 20.100714285714282,
+      "first_wave_lpr_pct": 34.68642857142857,
+      "later_recovery_rate_pct": 14.349047619047619,
+      "later_recovery_lpr_pct": 38.81714285714286,
+      "first_wave_change_pp": 5.570714285714286,
+      "later_recovery_change_from_pre_pp": -0.1809523809523812,
+      "first_wave_lpr_change_pp": -6.548809523809523,
+      "later_recovery_lpr_change_from_pre_pp": -2.4180952380952365,
+      "states": 7
+    },
+    {
+      "macro_region": "Northeast",
+      "pre_covid_rate_pct": 12.410000000000002,
+      "pre_covid_lpr_pct": 59.58111111111111,
+      "first_wave_rate_pct": 16.55,
+      "first_wave_lpr_pct": 46.835,
+      "later_recovery_rate_pct": 8.801111111111112,
+      "later_recovery_lpr_pct": 54.217777777777776,
+      "first_wave_change_pp": 4.139999999999999,
+      "later_recovery_change_from_pre_pp": -3.608888888888888,
+      "first_wave_lpr_change_pp": -12.746111111111107,
+      "later_recovery_lpr_change_from_pre_pp": -5.363333333333332,
+      "states": 3
+    },
+    {
+      "macro_region": "South",
+      "pre_covid_rate_pct": 4.56,
+      "pre_covid_lpr_pct": 42.745000000000005,
+      "first_wave_rate_pct": 30.049999999999997,
+      "first_wave_lpr_pct": 35.9575,
+      "later_recovery_rate_pct": 4.948333333333333,
+      "later_recovery_lpr_pct": 40.60277777777778,
+      "first_wave_change_pp": 25.49,
+      "later_recovery_change_from_pre_pp": 0.3883333333333335,
+      "first_wave_lpr_change_pp": -6.7875000000000005,
+      "later_recovery_lpr_change_from_pre_pp": -2.142222222222222,
+      "states": 6
+    },
+    {
+      "macro_region": "West",
+      "pre_covid_rate_pct": 5.828666666666667,
+      "pre_covid_lpr_pct": 42.34333333333333,
+      "first_wave_rate_pct": 14.999,
+      "first_wave_lpr_pct": 37.229,
+      "later_recovery_rate_pct": 6.218666666666667,
+      "later_recovery_lpr_pct": 42.07133333333333,
+      "first_wave_change_pp": 9.170333333333334,
+      "later_recovery_change_from_pre_pp": 0.3900000000000003,
+      "first_wave_lpr_change_pp": -5.11433333333333,
+      "later_recovery_lpr_change_from_pre_pp": -0.27199999999999847,
+      "states": 5
+    }
+  ],
+  "historical_balanced_full_period": {
+    "n_matched_states": 20,
+    "months": [
+      "2019-05",
+      "2019-06",
+      "2019-07",
+      "2019-08",
+      "2019-09",
+      "2019-10",
+      "2019-11",
+      "2019-12",
+      "2020-01",
+      "2020-02",
+      "2020-03",
+      "2020-04",
+      "2020-05",
+      "2020-06"
+    ]
+  },
+  "historical_january_june_matched_comparison": {
+    "n_states_per_area": 20,
+    "periods": {
+      "pre_covid": [
+        "2020-01",
+        "2020-02",
+        "2020-03"
+      ],
+      "first_wave": [
+        "2020-04",
+        "2020-05"
+      ],
+      "june": [
+        "2020-06"
+      ]
+    },
+    "area_means": [
+      {
+        "area": "Rural",
+        "pre_covid_rate_pct": 9.484833333333333,
+        "pre_covid_lpr_pct": 45.397666666666666,
+        "first_wave_rate_pct": 23.314,
+        "first_wave_lpr_pct": 38.28825,
+        "june_rate_pct": 12.9395,
+        "june_lpr_pct": 43.4565,
+        "first_wave_change_pp": 13.829166666666666,
+        "june_change_from_pre_pp": 3.4546666666666668,
+        "first_wave_lpr_change_pp": -7.109416666666666,
+        "june_lpr_change_from_pre_pp": -1.9411666666666676,
+        "states": 20
+      },
+      {
+        "area": "Urban",
+        "pre_covid_rate_pct": 12.150666666666666,
+        "pre_covid_lpr_pct": 42.464666666666666,
+        "first_wave_rate_pct": 27.92025,
+        "first_wave_lpr_pct": 33.601749999999996,
+        "june_rate_pct": 13.8325,
+        "june_lpr_pct": 38.813,
+        "first_wave_change_pp": 15.769583333333335,
+        "june_change_from_pre_pp": 1.6818333333333335,
+        "first_wave_lpr_change_pp": -8.862916666666667,
+        "june_lpr_change_from_pre_pp": -3.6516666666666673,
+        "states": 20
+      }
+    ],
+    "mean_urban_minus_rural_gaps_pp": {
+      "pre_covid_urban_minus_rural_pp": 2.6658333333333335,
+      "first_wave_urban_minus_rural_pp": 4.606250000000001,
+      "june_urban_minus_rural_pp": 0.893
+    }
+  },
+  "observed_2019_within_year_pattern": {
+    "Rural": {
+      "highest_month": "2019-10",
+      "highest_rate_pct": 9.903,
+      "lowest_month": "2019-05",
+      "lowest_rate_pct": 7.95
+    },
+    "Urban": {
+      "highest_month": "2019-09",
+      "highest_rate_pct": 12.062999999999999,
+      "lowest_month": "2019-06",
+      "lowest_rate_pct": 10.626999999999999
+    }
+  },
+  "validation": {
+    "required_schema": "passed",
+    "date_parsing_and_month_ends": "passed",
+    "unique_observation_keys": "passed",
+    "numeric_ranges_and_finiteness": "passed",
+    "complete_matched_comparison_panels": "passed",
+    "datasets_not_concatenated": true
+  }
+}
