@@ -1,4 +1,4 @@
-# CodeAlpha — Unemployment Analysis with Python
+# Unemployment Analysis with Python
 
 Explore unemployment trends across Indian states and rural/urban areas using Python data cleaning and visualizations. The project compares pre-Covid, lockdown-period, and later 2020 patterns, with policy insights and clear limits on national and causal claims.
 
